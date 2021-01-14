@@ -1,7 +1,10 @@
 const express = require("express");
 const config = require("./config");
+const volunteersRouter = require("./routes/volunteers");
 
 const app = express();
+
+volunteersRouter(app);
 
 app.listen(config.port, (error) => {
   if (error) {
